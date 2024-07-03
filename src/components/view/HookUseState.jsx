@@ -23,6 +23,7 @@ export const HookUseState = () => {
         <p>count: {count}</p>
         <button onClick={incrementUseState}>+</button>
       </div>
+
       <div className="m-5 border">
         <p>count2: {count2}</p>
         <button onClick={increment}>+</button>

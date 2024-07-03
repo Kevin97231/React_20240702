@@ -8,18 +8,17 @@ import { HookUseState } from "./components/view/HookUseState";
 function App() {
   return (
     <>
-      <Navbar />
-
-      <div className="app-container">
-        <div className="app">
-          <BrowserRouter>
+      <BrowserRouter>
+        <Navbar />
+        <div className="app-container">
+          <div className="app">
             <Routes>
               <Route path="/" element={<ExempleJsx />} />
               <Route path="/use-state" element={<HookUseState />} />
             </Routes>
-          </BrowserRouter>
+          </div>
         </div>
-      </div>
+      </BrowserRouter>
     </>
   );
 }
