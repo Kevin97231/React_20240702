@@ -2,16 +2,24 @@ import { useState } from "react";
 
 /* eslint-disable react/no-unescaped-entities */
 export const Formulaire = () => {
+  return (
+    <>
+      <h1>Les formulaires</h1>
+
+      <ChampControles />
+    </>
+  );
+};
+
+//  Exemple avec un champ 'contrôlé'
+const ChampControles = () => {
   const [name, setName] = useState("");
 
   const handleNameChange = (e) => {
     setName(e.target.value);
   };
-
   return (
     <>
-      <h1>Les formulaires</h1>
-
       <h2> Les champs contrôlés </h2>
       <p>
         En react, nous avons un concept que nous pouvons appeler les champs
