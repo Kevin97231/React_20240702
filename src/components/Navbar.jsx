@@ -38,6 +38,9 @@ function Navbar() {
               <Link to={"formulaire"}>Formulaire</Link>
             </li>
             <li>
+              <Link to={"hook-use-effect"}>Hook useEffect</Link>
+            </li>
+            <li>
               <Link to={"/exercice"}>Exercice</Link>
             </li>
           </ul>
@@ -57,6 +60,9 @@ function Navbar() {
           </li>
           <li>
             <Link to={"formulaire"}>Formulaire</Link>
+          </li>
+          <li>
+            <Link to={"hook-use-effect"}>Hook useEffect</Link>
           </li>
           <li>
             <Link to={"/exercice"}>Exercice</Link>

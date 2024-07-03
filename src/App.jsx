@@ -7,6 +7,7 @@ import { HookUseState } from "./components/view/HookUseState";
 import { Flux } from "./components/view/Flux";
 import { Formulaire } from "./components/view/Formulaire";
 import { Exercice } from "./components/view/Exercice";
+import { HookUseEffect } from "./components/view/HookUseEffect";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
               <Route path="/use-state" element={<HookUseState />} />
               <Route path="/flux" element={<Flux />} />
               <Route path="/formulaire" element={<Formulaire />} />
+              <Route path="/hook-use-effect" element={<HookUseEffect />} />
               <Route path="/exercice" element={<Exercice />} />
             </Routes>
           </div>
