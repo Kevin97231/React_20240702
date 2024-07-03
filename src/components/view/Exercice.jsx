@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 /* eslint-disable react/prop-types */
 export const Exercice = () => {
   return (
@@ -47,20 +49,53 @@ const ComposantParent = () => {
     { category: "Vegetables", price: "$1", number: 6, name: "Zucchini" },
   ];
 
-  const fruits = products.filter((product) => product === "Fruits");
-  const legumes = products.filter((product) => product === "Vegetables");
+  const fruits = products.filter((product) => product.category === "Fruits");
+  const legumes = products.filter(
+    (product) => product.category === "Vegetables"
+  );
+
+  const [afficherHorsStock, setAfficherHorsStock] = useState(true);
+  const [rechercheUtilisateur, setRechercheUtilisateur] = useState("");
+
+  const handleCheckBox = (e) => setAfficherHorsStock(e.target.checked);
+  const handleSearch = (e) => setRechercheUtilisateur(e.target.value);
 
   return (
     <>
-      <ProductList products={fruits} />
-      <ProductList products={legumes} />
+      <label>Afficher hors stock: </label>
+      <div className="flex">
+        <div>
+          <div>
+            <input
+              type="text"
+              value={rechercheUtilisateur}
+              onChange={handleSearch}
+            />
+          </div>
+          <input
+            type="checkbox"
+            checked={afficherHorsStock}
+            onChange={handleCheckBox}
+          />
+        </div>
+      </div>
+      <ProductList
+        products={fruits}
+        afficherHorsStock={afficherHorsStock}
+        rechercheUtilisateur={rechercheUtilisateur}
+      />
+      <ProductList
+        products={legumes}
+        afficherHorsStock={afficherHorsStock}
+        rechercheUtilisateur={rechercheUtilisateur}
+      />
       {/* <Fruits products={products} />;
       <Legumes products={products} />; */}
     </>
   );
 };
 
-const ProductList = ({ products }) => {
+const ProductList = ({ products, afficherHorsStock, rechercheUtilisateur }) => {
   return (
     <>
       <table className="table table-zebra">
@@ -72,13 +107,22 @@ const ProductList = ({ products }) => {
           </tr>
         </thead>
         <tbody>
-          {products.map((product) => (
-            <tr key={product.name}>
-              <td>{product.name}</td>
-              <td>{product.price}</td>
-              <td>{product.number}</td>
-            </tr>
-          ))}
+          {products.length > 0 &&
+            products
+              .filter(
+                (product) =>
+                  (afficherHorsStock ? true : product.number > 0) &&
+                  product.name
+                    .toLowerCase()
+                    .includes(rechercheUtilisateur.toLowerCase())
+              )
+              .map((product) => (
+                <tr key={product.name}>
+                  <td>{product.name}</td>
+                  <td>{product.price}</td>
+                  <td>{product.number}</td>
+                </tr>
+              ))}
         </tbody>
       </table>
     </>
