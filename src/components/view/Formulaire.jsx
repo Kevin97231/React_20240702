@@ -1,4 +1,5 @@
 import { ChampControle } from "../formulaires/ChampControle";
+import { FormulaireAvecVerif } from "../formulaires/FormulaireAvecVerif";
 import { FormulaireClassique } from "../formulaires/FormulaireClassique";
 
 /* eslint-disable react/no-unescaped-entities */
@@ -9,6 +10,8 @@ export const Formulaire = () => {
 
       <ChampControle />
       <FormulaireClassique />
+      <br />
+      <FormulaireAvecVerif />
     </>
   );
 };
