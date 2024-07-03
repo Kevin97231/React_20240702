@@ -31,6 +31,12 @@ function Navbar() {
             <li>
               <Link to={"/use-state"}>hook useState</Link>
             </li>
+            <li>
+              <Link to={"/flux"}>Flux</Link>
+            </li>
+            <li>
+              <Link to={"formulaire"}>Formulaire</Link>
+            </li>
           </ul>
         </div>
         <a className="btn btn-ghost text-xl">daisyUI</a>
@@ -42,6 +48,12 @@ function Navbar() {
           </li>
           <li>
             <Link to={"/use-state"}>hook useState</Link>
+          </li>
+          <li>
+            <Link to={"/flux"}>Flux</Link>
+          </li>
+          <li>
+            <Link to={"formulaire"}>Formulaire</Link>
           </li>
         </ul>
       </div>

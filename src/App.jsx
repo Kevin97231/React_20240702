@@ -4,6 +4,8 @@ import "./App.css";
 import ExempleJsx from "./components/view/ExempleJsx";
 import Navbar from "./components/Navbar";
 import { HookUseState } from "./components/view/HookUseState";
+import { Flux } from "./components/view/Flux";
+import { Formulaire } from "./components/view/Formulaire";
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
             <Routes>
               <Route path="/" element={<ExempleJsx />} />
               <Route path="/use-state" element={<HookUseState />} />
+              <Route path="/flux" element={<Flux />} />
+              <Route path="/formulaire" element={<Formulaire />} />
             </Routes>
           </div>
         </div>
