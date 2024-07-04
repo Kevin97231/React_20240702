@@ -35,10 +35,13 @@ function Navbar() {
               <Link to={"/flux"}>Flux</Link>
             </li>
             <li>
-              <Link to={"formulaire"}>Formulaire</Link>
+              <Link to={"/formulaire"}>Formulaire</Link>
             </li>
             <li>
-              <Link to={"hook-use-effect"}>Hook useEffect</Link>
+              <Link to={"/hook-use-effect"}>Hook useEffect</Link>
+            </li>
+            <li>
+              <Link to={"/requete-api"}>Requetes</Link>
             </li>
             <li>
               <Link to={"/exercice"}>Exercice</Link>
@@ -59,10 +62,13 @@ function Navbar() {
             <Link to={"/flux"}>Flux</Link>
           </li>
           <li>
-            <Link to={"formulaire"}>Formulaire</Link>
+            <Link to={"/formulaire"}>Formulaire</Link>
           </li>
           <li>
-            <Link to={"hook-use-effect"}>Hook useEffect</Link>
+            <Link to={"/hook-use-effect"}>Hook useEffect</Link>
+          </li>
+          <li>
+            <Link to={"/requete-api"}>Requetes</Link>
           </li>
           <li>
             <Link to={"/exercice"}>Exercice</Link>

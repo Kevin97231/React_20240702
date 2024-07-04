@@ -8,6 +8,7 @@ import { Flux } from "./components/view/Flux";
 import { Formulaire } from "./components/view/Formulaire";
 import { Exercice } from "./components/view/Exercice";
 import { HookUseEffect } from "./components/view/HookUseEffect";
+import { RequeteApi } from "./components/view/RequeteApi";
 
 function App() {
   return (
@@ -22,7 +23,9 @@ function App() {
               <Route path="/flux" element={<Flux />} />
               <Route path="/formulaire" element={<Formulaire />} />
               <Route path="/hook-use-effect" element={<HookUseEffect />} />
+              <Route path="/requete-api" element={<RequeteApi />} />
               <Route path="/exercice" element={<Exercice />} />
+              <Route path="*" element={<h1>404</h1>} />
             </Routes>
           </div>
         </div>

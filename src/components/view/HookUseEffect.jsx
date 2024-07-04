@@ -7,6 +7,10 @@ export const HookUseEffect = () => {
   useEffect(() => {
     console.log("Effet secondaire déclenché");
     document.title = `Count: ${count}`;
+
+    return () => {
+      console.log("fonction de nettoyage");
+    };
   }, [count]);
 
   useEffect(() => {
