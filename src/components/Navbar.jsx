@@ -47,6 +47,9 @@ function Navbar() {
               <Link to={"/hook-use-memo"}>Hook useMemo</Link>
             </li>
             <li>
+              <Link to={"/hook-perso"}>Hook perso</Link>
+            </li>
+            <li>
               <Link to={"/exercice"}>Exercice</Link>
             </li>
           </ul>
@@ -75,6 +78,9 @@ function Navbar() {
           </li>
           <li>
             <Link to={"/hook-use-memo"}>Hook useMemo</Link>
+          </li>
+          <li>
+            <Link to={"/hook-perso"}>Hook perso</Link>
           </li>
           <li>
             <Link to={"/exercice"}>Exercice</Link>
