@@ -11,6 +11,7 @@ import { HookUseEffect } from "./components/view/HookUseEffect";
 import { RequeteApi } from "./components/view/RequeteApi";
 import { HookUseMemo } from "./components/view/HookUseMemo";
 import { HookPerso } from "./components/view/HookPerso";
+import { RequeteWithuseAxios } from "./components/view/RequeteWithuseAxios";
 
 function App() {
   return (
@@ -28,6 +29,10 @@ function App() {
               <Route path="/requete-api" element={<RequeteApi />} />
               <Route path="/hook-use-memo" element={<HookUseMemo />} />
               <Route path="/hook-perso" element={<HookPerso />} />
+              <Route
+                path="/requete-with-use-axios"
+                element={<RequeteWithuseAxios />}
+              />
               <Route path="/exercice" element={<Exercice />} />
               <Route path="*" element={<h1>404</h1>} />
             </Routes>

@@ -50,6 +50,9 @@ function Navbar() {
               <Link to={"/hook-perso"}>Hook perso</Link>
             </li>
             <li>
+              <Link to={"/requete-with-use-axios"}>requete avec useAxios</Link>
+            </li>
+            <li>
               <Link to={"/exercice"}>Exercice</Link>
             </li>
           </ul>
@@ -81,6 +84,9 @@ function Navbar() {
           </li>
           <li>
             <Link to={"/hook-perso"}>Hook perso</Link>
+          </li>
+          <li>
+            <Link to={"/requete-with-use-axios"}>requete avec useAxios</Link>
           </li>
           <li>
             <Link to={"/exercice"}>Exercice</Link>

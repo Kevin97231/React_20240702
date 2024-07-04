@@ -1,13 +1,16 @@
 import axios from "axios";
 import { useState } from "react";
 
-const api = axios.create();
+const api = axios.create({
+  baseURL: "http://localhost:3001",
+});
 
 api.interceptors.request.use((config) => {
   // Cela va créer une nouvelle instance de la classe 'Promise' . Une promesse représenter une valeur
   // qui peut être disponible maintenant, dans le futur ou jamais .
   //   La fonction callback passée en paramètre (resolve) sera appelée lorsque la promesse sera résolue
 
+  // NE PAS LAISSER SUR UN PROJET --> rajoute 1,5 secondes à chacune des réponses aux requêtes
   return new Promise((resolve) => setTimeout(() => resolve(config), 1500)); // Délai de 1,5secondes
 });
 
