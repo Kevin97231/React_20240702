@@ -9,6 +9,7 @@ import { Formulaire } from "./components/view/Formulaire";
 import { Exercice } from "./components/view/Exercice";
 import { HookUseEffect } from "./components/view/HookUseEffect";
 import { RequeteApi } from "./components/view/RequeteApi";
+import { HookUseMemo } from "./components/view/HookUseMemo";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="/formulaire" element={<Formulaire />} />
               <Route path="/hook-use-effect" element={<HookUseEffect />} />
               <Route path="/requete-api" element={<RequeteApi />} />
+              <Route path="/hook-use-memo" element={<HookUseMemo />} />
               <Route path="/exercice" element={<Exercice />} />
               <Route path="*" element={<h1>404</h1>} />
             </Routes>

@@ -44,6 +44,9 @@ function Navbar() {
               <Link to={"/requete-api"}>Requetes</Link>
             </li>
             <li>
+              <Link to={"/hook-use-memo"}>Hook useMemo</Link>
+            </li>
+            <li>
               <Link to={"/exercice"}>Exercice</Link>
             </li>
           </ul>
@@ -69,6 +72,9 @@ function Navbar() {
           </li>
           <li>
             <Link to={"/requete-api"}>Requetes</Link>
+          </li>
+          <li>
+            <Link to={"/hook-use-memo"}>Hook useMemo</Link>
           </li>
           <li>
             <Link to={"/exercice"}>Exercice</Link>
